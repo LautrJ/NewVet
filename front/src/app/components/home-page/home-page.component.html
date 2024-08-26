@@ -1,0 +1,32 @@
+<div class="main-container">
+    <app-header></app-header>
+
+    <div class="bodyPage">
+        <app-carousel></app-carousel>
+    
+        <app-categories-list></app-categories-list>
+    
+        <div class="highlanders">
+            <h1 class="highlanders-title">Les highlanders du moment</h1>
+            <mat-list class="highlanders-list">
+                @for(product of highlanders; track product) {
+                    <mat-card class="prduct-card" (click)="navigateToProduct(product.productId)">
+                        <mat-card-content class="product-content">
+                            <div class="product-image">
+                                <img mat-card-image [src]="product.productImage" alt="{{ product.productName }}"/>
+                            </div>
+                            <div class="product-info">
+                                <mat-card-title>{{ product.productName }}</mat-card-title>
+                                <mat-card-subtitle>{{ product.productDescription }}</mat-card-subtitle>
+                                <p>Prix : {{ product.productPrice | currency }}</p>
+                                <p>Stock dispo : {{ product.productStock }}</p>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                }
+            </mat-list>
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+</div>

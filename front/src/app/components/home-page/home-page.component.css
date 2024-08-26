@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bodyPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.app-carousel {
+  width: 80%;
+  height: 322px;
+}
+
+.highlanders {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.highlanders-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.highlanders-title {
+  text-align: center;
+}
+
+.highlanders-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  max-width: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px;
+}
+
+.product-image {
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-content:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-toolbar {
+  background-color: lightgrey;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+}

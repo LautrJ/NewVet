@@ -1,27 +1,41 @@
-# Front
+# NewVet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Ce projet est une application front-end développée avec Angular 17. Elle vise à gérer les activités d'une clinique vétérinaire. Ce README vous guide à travers les étapes pour cloner, installer, tester et déployer ce projet.
 
-## Development server
+## Prérequis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (version 18.x ou plus récente)
+- [Angular CLI](https://angular.io/cli) (version 17.x)
+- Un gestionnaire de paquets comme npm (installé avec Node.js) ou [yarn](https://yarnpkg.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. **Cloner le dépôt**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   Clonez le dépôt GitHub sur votre machine locale en utilisant la commande suivante :
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/LautrJ/NewVet.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Accéder au répertoire du projet**
 
-## Running end-to-end tests
+    Naviguez dans le répertoire du projet :
+    cd NewVet
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Installer les dépendances**
 
-## Further help
+    Installez les dépendances avec, selon le package manager :
+    npm install
+    yarn install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. **Lancer le projet**
+
+    Pour tester l'application en local :
+    npm start || ng serve
+
+5. **Construire le projet**
+
+    Pour compiler l'application en vue d'une mise en production, utilisez la commande suivante :
+    ng build --configuration production

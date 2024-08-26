@@ -1,0 +1,41 @@
+<div class="main-container">
+    <app-header></app-header>
+
+    <div class="bodyPage">
+        <mat-card class="contact-card">
+            <mat-card-header>
+                <mat-card-title>Contactez-nous</mat-card-title>
+                <mat-card-subtitle>Nous serions ravis d'avoir de vos nouvelles !</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Nom</mat-label>
+                        <input matInput placeholder="Votre nom" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Votre adresse email" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Sujet</mat-label>
+                        <input matInput placeholder="Sujet du message" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput rows="6" placeholder="Votre message" required></textarea>
+                    </mat-form-field>
+
+                    <div class="button-container">
+                        <button mat-raised-button color="primary" type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,17 @@
+<div class="categories">
+    <h1 class="categories-title">Les catégories</h1>
+    <mat-list class="categories-list">
+        @for(category of categories; track category) {
+            <mat-card class="category-card" (click)="navigateToCategory(category.categoryId)">
+                <mat-card-content class="category-content">
+                    <div class="category-image">
+                        <img mat-card-image [src]="category.categoryImage" alt="{{ category.categoryName }}"/>
+                    </div>
+                    <div class="category-overlay">
+                        <span class="category-name">{{ category.categoryName }}</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        }
+    </mat-list>
+</div>

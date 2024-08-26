@@ -1,0 +1,56 @@
+<div class="main-container">
+    <app-header></app-header>
+
+    <div class="bodyPage">
+        <mat-card class="category-card">
+            <mat-card-content class="category-content">
+                <div class="category-image">
+                    <img mat-card-image [src]="currentCategory?.categoryImage" alt="{{ currentCategory?.categoryName }}"/>
+                </div>
+                <div class="category-overlay">
+                    <span class="category-name">{{ currentCategory?.categoryName }}</span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <div class="gap"></div>
+
+        <div class="product-list">
+            @if (currentProducts.length > 0) {
+                <h2>Produits dans la catégorie "{{ currentCategory?.categoryName }}"</h2>
+                <mat-grid-list cols="4" rowHeight="600px" gutterSize="16px">
+                    @for (product of currentProducts; track product) {
+                        <mat-grid-tile colspan="4">
+                          <div class="product-grid-container">
+                            <div class="product-image" style="width: 400px; height: 600px;" (click)="navigateToProduct(product.productId)">
+                              <img mat-card-image [src]="product.productImage" alt="{{ product.productName }}" />
+                            </div>
+                            
+                            <div class="product-info" (click)="navigateToProduct(product.productId)">
+                              <mat-card-title>Nom : {{ product.productName }}</mat-card-title>
+                              <mat-card-subtitle>Description : {{ product.productDescription }}</mat-card-subtitle>
+                            </div>
+                      
+                            <div class="product-price">
+                              <p>Prix : {{ product.productPrice | currency }}</p>
+                            </div>
+                      
+                            <div class="product-stock">
+                              <p [ngClass]="{'in-stock': product.productStock > 0, 'out-of-stock': product.productStock <= 0}">
+                                {{ product.productStock > 0 ? 'Stock disponible' : 'Stock indisponible' }}
+                              </p>
+                            </div>
+                          </div>
+                        </mat-grid-tile>
+                    }
+                  </mat-grid-list>                  
+            }
+
+            @if(currentProducts.length <= 0) {
+                <p>Aucun produit renseigné dans la catégorie</p>
+            }
+          </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

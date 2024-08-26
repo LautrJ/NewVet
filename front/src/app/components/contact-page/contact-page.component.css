@@ -1,0 +1,53 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bodyPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 16px;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+mat-card-header {
+    text-align: center;
+}
+
+mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+mat-card-subtitle {
+    margin-bottom: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+app-footer {
+    margin-top: auto;
+}

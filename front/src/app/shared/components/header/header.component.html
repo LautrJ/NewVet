@@ -1,0 +1,42 @@
+<mat-toolbar class="header">
+    <div class="toolbar-section-left">
+        <button mat-icon-button [routerLink]="['']">
+            <mat-icon fontIcon="home"></mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon fontIcon="menu"></mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/categories']">Catégories</button>
+            <button mat-menu-item [routerLink]="['/cgu']">CGU</button>
+            <button mat-menu-item>Mentions légales</button>
+            <button mat-menu-item [routerLink]="['/contact']">Contact</button>
+            <button mat-menu-item>A propos</button>
+        </mat-menu>
+    </div>
+
+    <a mat-button class="toolbar-title" [routerLink]="['']">NewVet</a>
+
+    <div class="toolbar-section-right">
+        @if(userConnected) {
+            <button mat-icon-button [matMenuTriggerFor]="connected" *ngIf="userConnected">
+                <mat-icon fontIcon="person"></mat-icon>
+            </button>
+            <mat-menu #connected="matMenu">
+                <button mat-menu-item>Mes paramètres</button>
+                <button mat-menu-item>Mes commandes</button>
+                <button mat-menu-item>Se déconnecter</button>
+            </mat-menu>
+        }
+
+        @if(!userConnected) {
+            <button mat-icon-button [matMenuTriggerFor]="notConnected" *ngIf="!userConnected">
+                <mat-icon fontIcon="person"></mat-icon>
+            </button>
+            <mat-menu #notConnected="matMenu">
+                <button mat-menu-item [routerLink]="['/login']">Se connecter</button>
+                <button mat-menu-item [routerLink]="['/signin']">S'inscrire</button>
+            </mat-menu>
+        }
+    </div>
+</mat-toolbar>

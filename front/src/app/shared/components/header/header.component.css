@@ -1,0 +1,21 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.toolbar-section-left,
+.toolbar-section-right {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 24px;
+}

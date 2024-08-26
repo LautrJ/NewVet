@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bodyPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 16px;
+}
+
+.about-card {
+    width: 100%;
+    max-width: 800px;
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+mat-card-footer {
+    text-align: center;
+    margin-top: 16px;
+}
